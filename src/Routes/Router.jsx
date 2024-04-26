@@ -1,15 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-
-
-// import EstateDetails from "../pages/EstateDetails/EstateDetails";
-// import Login from "../pages/Login/Login";
-// import Register from "../pages/Register/Register";
-// import ContactUs from "../pages/ContactUs/ContactUs";
-// import PrivateRoute from "./PrivateRoute";
-// import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
-import Home from "../Pages/ErrorPage/Home/Home";
 import MainLayout from "../Layout/MainLayout";
+import Home from "../Pages/Home/Home";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 
 const router = createBrowserRouter([
@@ -20,17 +14,21 @@ const router = createBrowserRouter([
       children: [
         {
             path : '/',
-           element: <Home></Home>,
+           element: <Home></Home> ,
+        },
+        {
+           path: '/login',
+           element: <Login></Login>
+        },
+        {
+          path: '/register',
+          element: <Register></Register>
         }
       //   {
       //     path: '/detail/:id',
       //   element: <PrivateRoute>
       //     <EstateDetails></EstateDetails>
       //   </PrivateRoute>,
-      //   },
-      //   {
-      //     path: '/login',
-      //     element: <Login></Login>,
       //   },
       //   {
       //     path: '/register',
