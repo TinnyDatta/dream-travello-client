@@ -35,6 +35,7 @@ const AuthProvider = ( {children}) => {
 
     // logout
     const logout = () => {
+        setUser(null)
         signOut(auth)
     }
 
@@ -60,7 +61,8 @@ const allValues = {
     signInUser,
     googleLogin,
     githubLogin,
-    logout
+    logout,
+    user
 }
 
     return (

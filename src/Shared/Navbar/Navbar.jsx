@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const {user, logout} = useContext(AuthContext)
 
     const navLinks = <>
     <li><NavLink to='/'>Home</NavLink></li>
@@ -26,7 +29,7 @@ const Navbar = () => {
       {navLinks}
     </ul>
   </div>
-  <div className="navbar-end">
+  {/* <div className="navbar-end">
   <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -36,6 +39,25 @@ const Navbar = () => {
         <Link to='/login' className="btn">Login</Link>
         <Link to='/register' className="btn">Register</Link>
     </div>
+    
+  </div> */}
+  <div className="navbar-end">
+  {
+    user?.email? 
+    <div className="flex items-center gap-1">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+    <div className="w-10 rounded-full" title={user?.displayName || 'not found'}>
+      <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    </div>
+  </div>
+  <button onClick={logout} className="btn btn-sm btn-ghost">Logout</button>
+      </div>
+:
+<div className="flex flex-row gap-2">
+    <Link to='/login' className="btn">Login</Link>
+    <Link to='/register' className="btn">Register</Link>
+</div>
+  }
     
   </div>
 </div>
