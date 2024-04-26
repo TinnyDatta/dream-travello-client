@@ -6,12 +6,12 @@ const Navbar = () => {
   const {user, logout} = useContext(AuthContext)
 
     const navLinks = <>
-    <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/allTouristsSpot'>All Tourists Spot</NavLink></li> 
+    <li><NavLink to='/' className={({isActive}) => isActive? ' text-purple-500 font-bold border border-purple-400 p-2' : ''}>Home</NavLink></li>
+    <li><NavLink className={({isActive}) => isActive? 'font-bold border p-2 border-purple-400 text-purple-500' : ''} to='/allTouristsSpot'>All Tourists Spot</NavLink></li> 
     {
       user && <>
-      <li><NavLink to='/addTouristsSpot'>Add Tourists Spot</NavLink></li>
-      <li><NavLink to='/myList'>My List</NavLink></li>
+      <li><NavLink className={({isActive}) => isActive? 'font-bold border p-2 border-purple-400 text-purple-500' : ''} to='/addTouristsSpot'>Add Tourists Spot</NavLink></li>
+      <li><NavLink className={({isActive}) => isActive? 'font-bold border p-2 border-purple-400 text-purple-500' : ''} to='/myList'>My List</NavLink></li>
       </>
     }
     
