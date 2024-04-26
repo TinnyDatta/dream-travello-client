@@ -53,7 +53,7 @@ const Navbar = () => {
     <div className="flex items-center gap-1">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
     <div className="w-10 rounded-full" title={user?.displayName || 'not found'}>
-      <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <img alt="" src={user?.photoURL || 'https://i.ibb.co/s21kx6n/default-avatar-profile-icon-of-social-media-user-in-clipart-style-vector.jpg'} />
     </div>
   </div>
   <button onClick={logout} className="btn btn-sm btn-ghost">Logout</button>
