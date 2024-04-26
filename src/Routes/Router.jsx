@@ -4,6 +4,10 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import AllTouristsSpot from "../Pages/AllTouristsSpot/AllTouristsSpot";
+import AddTouristsSpot from "../Pages/AddTouristsSpot/AddTouristsSpot";
+import MyList from "../Pages/MyList/MyList";
+import PrivateRoute from "../Pages/PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -23,29 +27,23 @@ const router = createBrowserRouter([
         {
           path: '/register',
           element: <Register></Register>
+        },
+        {
+          path: '/allTouristsSpot',
+          element: <AllTouristsSpot></AllTouristsSpot>
+        },
+        {
+          path: '/addTouristsSpot',
+          element: <PrivateRoute>
+            <AddTouristsSpot></AddTouristsSpot>
+          </PrivateRoute>
+        },
+        {
+          path: '/myList',
+          element: <PrivateRoute>
+            <MyList></MyList>
+          </PrivateRoute>
         }
-      //   {
-      //     path: '/detail/:id',
-      //   element: <PrivateRoute>
-      //     <EstateDetails></EstateDetails>
-      //   </PrivateRoute>,
-      //   },
-      //   {
-      //     path: '/register',
-      //     element: <Register></Register>,
-      //   },
-      //   {
-      //     path: '/update',
-      //     element: <PrivateRoute>
-      //       <UpdateProfile></UpdateProfile>
-      //     </PrivateRoute>
-      //   },
-      //  {
-      //   path: '/contact',
-      //   element: <PrivateRoute>
-      //     <ContactUs></ContactUs>
-      //   </PrivateRoute>
-      //  }
       ]
     },
   ]);

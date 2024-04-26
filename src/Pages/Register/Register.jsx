@@ -60,16 +60,16 @@ const Register = () => {
       console.log(result)
       if(result.user){
          
-    //   updateUserProfile(name, photo)
-    //   .then(()=> {
+      updateUserProfile(name, photo)
+      .then(()=> {
 
-    //     setUser((user)=>({
+        setUser((user)=>({
           
-    //       ...user, displayName:name, photoURL: photo 
-    //      }))
+          ...user, displayName:name, photoURL: photo 
+         }))
         
-    //     navigate(location?.state || '/')
-    //   })
+        navigate(location?.state || '/')
+      })
         // navigate(location?.state || '/')
        
        }

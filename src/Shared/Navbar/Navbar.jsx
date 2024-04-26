@@ -7,7 +7,13 @@ const Navbar = () => {
 
     const navLinks = <>
     <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/touristSpot'>All Tourists Spot</NavLink></li>
+    <li><NavLink to='/allTouristsSpot'>All Tourists Spot</NavLink></li> 
+    {
+      user && <>
+      <li><NavLink to='/addTouristsSpot'>Add Tourists Spot</NavLink></li>
+      <li><NavLink to='/myList'>My List</NavLink></li>
+      </>
+    }
     
     </>
 
