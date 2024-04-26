@@ -4,7 +4,7 @@ import { MdDirectionsRailwayFilled } from "react-icons/md";
 const Services = () => {
     return (
         <div className="my-12">
-            <h2 className="text-3xl text-center  mb-4">Special Services</h2>
+            <h2 className="text-3xl text-center font-bold mb-4">Special Services</h2>
    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
    <div className="card w-96 bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
