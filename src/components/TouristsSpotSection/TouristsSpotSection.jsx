@@ -8,6 +8,8 @@ import 'swiper/css/free-mode';
 
 
 import { FreeMode, Pagination } from 'swiper/modules';
+import { Typewriter } from 'react-simple-typewriter';
+import { Tooltip } from 'react-tooltip';
 
 const TouristsSpotSection = () => {
     const spots = useLoaderData();
@@ -16,7 +18,18 @@ const TouristsSpotSection = () => {
     return (
         <div className='flex items-center justify-center flex-col my-10'>
             <h1 className="text-3xl font-semibold text-center pb-2">Tourists Spots</h1>
-            <p className='font-bold text-center pb-10'>Explore some awesome tourists spots with <span className='text-purple-400 text-xl ml-2'>Dream Travello</span></p>
+            <p className='font-bold text-center pb-10'>
+            <Typewriter
+            words= {['Explore some awesome tourists spots with Dream Travello']}
+            loop ={true}
+            cursor
+            cursorStyle = ''
+            typeSpeed= {70}
+            deleteSpeed= {50}
+            delaySpeed={2000}
+
+                />
+                </p>
             <Swiper 
             breakpoints={{
                 340: {
@@ -57,8 +70,13 @@ const TouristsSpotSection = () => {
 		</div>
 		<div>
         <Link to={`/viewDetails/${spot._id}`}>
-        <button  type="button" className="flex items-center justify-center w-full p-2 font-semibold tracking-wide rounded-md dark:bg-purple-500 dark:text-gray-50">View Property</button>
+        <button  type="button" className="flex items-center justify-center w-full p-2 font-semibold tracking-wide rounded-md dark:bg-purple-500 dark:text-gray-50" data-tooltip-id="my-tooltip">View Details</button>
         </Link>
+        <Tooltip
+  id="my-tooltip"
+  content="Click to know more!"
+  events={['hover']}
+/>
         </div>
 	</div>
 </div>
