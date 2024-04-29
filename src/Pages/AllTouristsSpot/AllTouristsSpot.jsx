@@ -1,24 +1,35 @@
-// import { useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const AllTouristsSpot = () => {
 
-//   const allSpots = useLoaderData();
+  const allSpots = useLoaderData();
 
     return (
 
-        <div>
-               <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="card card-side bg-base-100 shadow-xl">
-  <figure><img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">New movie is released!</h2>
-    <p>Click the button to watch on Jetflix app.</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Watch</button>
-    </div>
-  </div>
-</div>
-               </div>
+        <div className="my-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {
+                allSpots.map((allSpot) => (
+                    
+                    <div key={allSpot._id}  >
+                    <div className="card card-side bg-base-100 shadow-xl">
+       <figure><img className="sm:w-[200px] lg:w-[300px] h-[230px] p-2 rounded-full" src={allSpot.image} alt=" "/></figure>
+       <div className="card-body">
+         <h2 className="card-title">{allSpot.touristsSpot}</h2>
+         <div className="flex flex-col text-lg">
+           <p>Travel Time : {allSpot.travelTime}</p>
+           <p>Seasonality : {allSpot.seasonality}</p>
+         </div>
+         <div className="flex flex-col text-lg">
+         <p>Average Cost : {allSpot.averageCost}</p>
+         <p>Visitor Per Year : {allSpot.totalVisitorPerYear}</p>
+         </div>
+       </div>
+     </div>
+                    </div>
+                    
+                ))
+            }
+               
         </div>
         
     );
