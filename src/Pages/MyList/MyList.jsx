@@ -31,8 +31,11 @@ const MyList = () => {
            .then(data => {
             console.log(data)
             if(data.deletedCount> 0){
-               setControl(!control) &&
-               Swal.fire({
+               setControl(!control) 
+               
+            }
+            if(data.deletedCount> 0){
+              Swal.fire({
                 title: "Deleted!",
                 text: "Deleted successfully.",
                 icon: "success"
