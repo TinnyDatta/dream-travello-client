@@ -24,7 +24,7 @@ const MyList = () => {
         if (result.isConfirmed) {
           
           
-           fetch(`http://localhost:5000/addTouristsSpots/${_id}`, {
+           fetch(`https://dream-travello-server.vercel.app/addTouristsSpots/${_id}`, {
             method : 'DELETE'
            })
            .then(res => res.json())
@@ -48,7 +48,7 @@ const MyList = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myList/${user?.email}`)
+        fetch(`https://dream-travello-server.vercel.app/myList/${user?.email}`)
         .then(res=> res.json())
         .then(data => {
           setItems(data);

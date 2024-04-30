@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         {
             path : '/',
            element: <Home></Home> ,
-           loader: () => fetch('http://localhost:5000/addTouristsSpots'),
+           loader: () => fetch('https://dream-travello-server.vercel.app/addTouristsSpots'),
            
         },
         {
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         {
           path: '/allTouristsSpot',
           element: <AllTouristsSpot></AllTouristsSpot>,
-          loader: () => fetch('http://localhost:5000/addTouristsSpots'),
+          loader: () => fetch('https://dream-travello-server.vercel.app/addTouristsSpots'),
           
         },
         {
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
           element: <PrivateRoute>
             <Update></Update>
           </PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/addTouristsSpots/${params.id}`)
+          loader: ({params}) => fetch(`https://dream-travello-server.vercel.app/addTouristsSpots/${params.id}`)
         },
         {
           path: '/specificCountry',

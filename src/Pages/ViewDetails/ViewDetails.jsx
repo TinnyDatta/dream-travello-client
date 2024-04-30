@@ -12,7 +12,7 @@ const ViewDetails = () => {
   const [touristsSpot, setTouristsSpot] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleTouristsSpot/${id}`)
+    fetch(`https://dream-travello-server.vercel.app/singleTouristsSpot/${id}`)
     .then(res => res.json())
     .then(data => {
       setTouristsSpot(data)

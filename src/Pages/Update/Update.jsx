@@ -26,7 +26,7 @@ const Update = () => {
     console.log(updatedSpot);
 
     // send data to the server
-    fetch(`http://localhost:5000/addTouristsSpots/${_id}`, {
+    fetch(`https://dream-travello-server.vercel.app/addTouristsSpots/${_id}`, {
         method: 'PUT',
         headers: {
             'content-type' : 'application/json'

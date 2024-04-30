@@ -26,7 +26,7 @@ const AddTouristsSpot = () => {
     console.log(addedSpot);
 
     // send data to the server
-    fetch('http://localhost:5000/addTouristsSpots', {
+    fetch('https://dream-travello-server.vercel.app/addTouristsSpots', {
         method: 'POST',
         headers: {
             'content-type' : 'application/json'

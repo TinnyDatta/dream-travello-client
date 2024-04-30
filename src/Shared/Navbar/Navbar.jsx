@@ -66,7 +66,7 @@ const Navbar = () => {
   <button onClick={logout} className="btn btn-sm btn-ghost">Logout</button>
       </div>
 :
-<div className="flex sm:flex-col flex-row gap-2">
+<div className="flex flex-row gap-2">
     <Link to='/login' className="btn" >Login</Link>
     
     <Link to='/register' className="btn">Register</Link>
