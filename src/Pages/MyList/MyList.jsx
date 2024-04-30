@@ -57,8 +57,8 @@ const MyList = () => {
 
     return (
         <div>
-<div className="overflow-x-auto my-12">
-  <table className="table">
+<div className=" overflow-x-auto  my-12">
+  <table className="table ">
     {/* head */}
     <thead>
       <tr className="text-xl">

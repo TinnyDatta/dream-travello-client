@@ -30,14 +30,14 @@ const SocialLogin = () => {
                 <button
               onClick={()=>handleSocialLogin(googleLogin)}
              
-                className="btn bg-cyan-300">Google</button>
+                className="btn bg-purple-300">Google</button>
                 
               </div>
               
             <div className="form-control ml-7 mr-5">
                 <button
                onClick={()=>handleSocialLogin(githubLogin)}
-                className="btn bg-cyan-300">Github</button>
+                className="btn bg-purple-300">Github</button>
               </div>
         </div>
     );
