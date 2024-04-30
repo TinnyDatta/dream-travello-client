@@ -11,6 +11,7 @@ import PrivateRoute from "../Pages/PrivateRoute/PrivateRoute";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import Update from "../Pages/Update/Update";
 import CountriesSection from "../components/CountriesSection/CountriesSection";
+import SpecificCountry from "../Pages/SpecificCountry/SpecificCountry";
 
 
 
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
             <Update></Update>
           </PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/addTouristsSpots/${params.id}`)
+        },
+        {
+          path: '/specificCountry',
+          element: <SpecificCountry></SpecificCountry>
         }
       ]
     },
