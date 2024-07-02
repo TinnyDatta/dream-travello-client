@@ -16,8 +16,9 @@
 <li>npm run dev</li>
 
 ## Technologies
-<li>Online booking</li>
-<li>One can add places</li>
-<li>see added places</li>
+<li>React</li>
+<li>Node.js</li>
+<li>Mongodb</li>
+<li>Firebase</li>
 
 [Dreamtravello website](https://dream-travello-client.web.app)
